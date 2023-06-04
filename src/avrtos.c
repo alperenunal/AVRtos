@@ -168,6 +168,8 @@ static task_queue_t suspended_tasks; ///< Queue of suspended tasks
 
 static uint16_t global_tick_count; ///< Tick count from the start of scheduler
 
+static semaphore_t uart_sem;
+
 static inline double log2(double x) { return log(x) / M_LN2; }
 
 static int pow2(int x) {
@@ -859,6 +861,8 @@ static FILE uart_input =
  *
  */
 void uart_init(void) {
+  uart_sem = semaphore_init(1); // error handle
+
   UBRR0H = UBRRH_VALUE;
   UBRR0L = UBRRL_VALUE;
 
@@ -937,4 +941,16 @@ uint8_t gpio_pin_read(uint8_t pin) {
   }
 
   return value;
+}
+
+int print(const char *fmt, ...) {
+  semaphore_take(uart_sem, MAX_DELAY);
+  va_list args;
+  va_start(args, fmt);
+
+  int bytes = vprintf(fmt, args);
+
+  va_end(args);
+  semaphore_give(uart_sem);
+  return bytes;
 }

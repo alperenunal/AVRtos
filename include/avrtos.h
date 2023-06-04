@@ -182,4 +182,13 @@ void gpio_pin_write(uint8_t pin, uint8_t value);
  */
 uint8_t gpio_pin_read(uint8_t pin);
 
+/**
+ * @brief Print to standard output
+ *
+ * @param fmt Format string
+ * @param ... Arguments
+ * @return int
+ */
+int print(const char *fmt, ...);
+
 #endif
