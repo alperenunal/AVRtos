@@ -25,6 +25,14 @@
 var NAVTREE =
 [
   [ "AVRtos", "index.html", [
+    [ "AVRtos", "md__r_e_a_d_m_e.html", [
+      [ "Features", "md__r_e_a_d_m_e.html#autotoc_md1", [
+        [ "Multitasking", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
+        [ "Task Synchronization", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+        [ "Inter-Task Communication", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
+        [ "Peripheral Drivers", "md__r_e_a_d_m_e.html#autotoc_md5", null ]
+      ] ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],

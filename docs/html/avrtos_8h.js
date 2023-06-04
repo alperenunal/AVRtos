@@ -22,6 +22,7 @@ var avrtos_8h =
     [ "gpio_pin_read", "avrtos_8h.html#a9efa7d4346d8f403bb6cbac03660b66f", null ],
     [ "gpio_pin_write", "avrtos_8h.html#aa39e6db7e2a74111b8a6fab7117a2a82", null ],
     [ "gpio_set_pin_mode", "avrtos_8h.html#ae52339d170c52ae2cb690a75174a830d", null ],
+    [ "print", "avrtos_8h.html#af9d42affcdcfe42b0bbd77e3d3329d8f", null ],
     [ "queue_destroy", "avrtos_8h.html#a58a83c7e12a35a9c39349afe4548a3df", null ],
     [ "queue_init", "avrtos_8h.html#ab1a26cfba48b0f065f03fc76a830e7dd", null ],
     [ "queue_receive", "avrtos_8h.html#ad3342812a6f2cb2700a94bebb1da593e", null ],
