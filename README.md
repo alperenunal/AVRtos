@@ -1,6 +1,6 @@
 # AVRtos
 
-A Real-Time Operating System designed for AVR ATmega 328p microcontroller
+A Real-Time Operating System designed for AVR ATmega328p microcontroller
 
     WARNING
     AVRtos is experimental, use it at your own risk with real hardware.
