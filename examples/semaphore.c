@@ -10,9 +10,9 @@ void consumer1(void *arg) {
   for (;;) {
     bool acquired = semaphore_take(sem, 1000);
     if (acquired) {
-      printf("Consumer 1: Acquired\n");
+      print("Consumer 1: Acquired\n");
     } else {
-      printf("Consumer 1: Could not acquire\n");
+      print("Consumer 1: Could not acquire\n");
     }
   }
 }
@@ -22,7 +22,7 @@ void consumer2(void *arg) {
 
   for (;;) {
     semaphore_take(sem, MAX_DELAY);
-    printf("Consumer 2: Acquired\n");
+    print("Consumer 2: Acquired\n");
   }
 }
 
@@ -31,8 +31,8 @@ void producer(void *arg) {
 
   for (;;) {
     semaphore_give(sem);
-    printf("Producer: Released\n");
-    task_delay(2000);
+    print("Producer: Released\n");
+    task_delay(1500);
   }
 }
 

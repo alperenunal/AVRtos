@@ -10,7 +10,7 @@ void consumer(void *arg) {
   for (;;) {
     int message;
     queue_receive(queue, &message, MAX_DELAY);
-    printf("Consumer: %d\n", message);
+    print("Consumer: %d\n", message);
     task_delay(2000);
   }
 }
@@ -19,8 +19,8 @@ void producer(void *arg) {
   int val = *(int *)arg;
 
   for (;;) {
-    printf("Producer: %d\n", val);
     queue_send(queue, &val, MAX_DELAY);
+    print("Producer: %d\n", val);
     val++;
     task_delay(1000);
   }
